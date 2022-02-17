@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { BsBrightnessHighFill, BsMoonFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ toggleDark }) => {
+const Navbar = ({ toggleDark, active }) => {
   return (
     <Fragment>
       <div className="flex flex-row justify-between xl:w-8/12 mx-auto p-6">
@@ -19,27 +19,37 @@ const Navbar = ({ toggleDark }) => {
           <li>
             <Link to={"/skills"}>Skills</Link>
           </li>
-          <li>Projects</li>
-          <li>Contact</li>
           <li>
-            <button
-              className="bg-gray-200 p-1 rounded-sm"
-              onClick={() => toggleDark()}
-            >
-              <BsBrightnessHighFill
-                className="border border-gray-200 p-1 rounded-full"
-                size={25}
-              />
-            </button>
+            <Link to={"/projects"}>Projects</Link>
           </li>
           <li>
-            <button className="bg-gray-200 p-1 rounded-sm">
-              <BsMoonFill
-                className="border border-gray-200 p-1 rounded-full"
-                size={25}
-              />
-            </button>
+            <Link to={"/contact"}>Contact</Link>
           </li>
+          {!active ? (
+            <li>
+              <button
+                className="bg-gray-200 p-1 rounded-sm"
+                onClick={() => toggleDark()}
+              >
+                <BsMoonFill
+                  className="border border-gray-200 p-1 rounded-full"
+                  size={25}
+                />
+              </button>
+            </li>
+          ) : (
+            <li>
+              <button
+                className="bg-gray-200 p-1 rounded-sm"
+                onClick={() => toggleDark()}
+              >
+                <BsBrightnessHighFill
+                  className="border border-gray-200 p-1 rounded-full"
+                  size={25}
+                />
+              </button>
+            </li>
+          )}
         </ul>
       </div>
     </Fragment>
