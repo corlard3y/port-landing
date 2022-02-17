@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "TomatoGrotesk";
+  src: local("TomatoGrotesk"),
+    url("./assets/fonts/TomatoGrotesk-Regular.otf") format("truetype");
+  /* font-weight: bold; */
+}
+
+@font-face {
+  font-family: "TomatoGrotesk";
+  src: local("TomatoGrotesk"),
+    url("./assets/fonts/TomatoGrotesk-Bold.otf") format("truetype");
+  font-weight: bold;
+}
+
+.regular-font {
+  font-family: TomatoGrotesk;
+}
+
+.bold-font {
+  font-family: TomatoGrotesk;
+  font-weight: bold;
+}
+
+.actual-font {
+  font-family: "DM Sans", sans-serif;
+}
