@@ -1,19 +1,26 @@
 import React, { Fragment } from "react";
 import { BsBrightnessHighFill, BsMoonFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ toggleDark }) => {
   return (
     <Fragment>
       <div className="flex flex-row justify-between xl:w-8/12 mx-auto p-6">
         <h1 className="bold-font text-2xl text-gray-500">
-          Kolade <b className="text-indigo-600">Joseph</b>
+          <Link to={"/"}>
+            Kolade <b className="text-indigo-600">Joseph</b>
+          </Link>
         </h1>
 
         <ul className="flex flex-row xl:w-5/12 justify-between regular-font text-gray-500 items-center">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/skills"}>Skills</Link>
+          </li>
           <li>Projects</li>
+          <li>Contact</li>
           <li>
             <button
               className="bg-gray-200 p-1 rounded-sm"

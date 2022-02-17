@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .listings li {
+    @apply mt-4;
+  }
+}
+
 @font-face {
   font-family: "TomatoGrotesk";
   src: local("TomatoGrotesk"),

@@ -1,6 +1,8 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import About from "./screens/About";
 import Home from "./screens/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const toggleDark = (e) => {
@@ -18,13 +20,20 @@ function App() {
     }
   };
   return (
-    <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
-      <Navbar toggleDark={toggleDark} />
+    <BrowserRouter>
+      <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
+        <Navbar toggleDark={toggleDark} />
 
-      <section className="flex-1">
-        <Home />
-      </section>
-    </div>
+        <section className="flex-1 my-auto">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<About />} />
+            {/* <Home /> */}
+            {/* <About /> */}
+          </Routes>
+        </section>
+      </div>
+    </BrowserRouter>
   );
 }
 
