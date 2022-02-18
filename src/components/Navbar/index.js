@@ -40,11 +40,11 @@ const Navbar = ({ toggleDark, active }) => {
           ) : (
             <li>
               <button
-                className="bg-gray-200 p-1 rounded-sm"
+                className="bg-gray-800 p-1 rounded-sm"
                 onClick={() => toggleDark()}
               >
                 <BsBrightnessHighFill
-                  className="border border-gray-200 p-1 rounded-full"
+                  className="border border-gray-800 p-1 rounded-full"
                   size={25}
                 />
               </button>
