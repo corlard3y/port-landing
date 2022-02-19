@@ -1,66 +1,109 @@
 import React, { Fragment } from "react";
-import { BsBrightnessHighFill, BsMoonFill } from "react-icons/bs";
+import { BsBrightnessHighFill, BsMoonFill, BsTextRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ toggleDark, active }) => {
-  return (
-    <Fragment>
-      <div className="flex flex-row justify-between w-11/12 xl:w-8/12 mx-auto p-6">
-        <h1 className="bold-font text-2xl text-gray-500">
-          <Link to={"/"}>
-            Kolade <b className="text-indigo-600">Joseph</b>
-          </Link>
-        </h1>
+  const openNav = () => {
+    if (document.getElementById("myNav")) {
+      document.getElementById("myNav").style.width = "100%";
+    }
+  };
 
-        <ul className="hidden lg:flex flex-row lg:w-3/12 xl:w-4/12 justify-between regular-font text-gray-500 items-center">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/skills"}>Skills</Link>
-          </li>
-          <li>
-            <Link to={"/projects"}>Projects</Link>
-          </li>
-          <li>
-            <a
-              // href="https://docs.google.com/document/d/1Q4PFWKHWL9fMV58TpHL5jFfFFI4VGH1xGwzooOfuwWE/edit?usp=sharing"
-              href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-              className="bg-indigo-600 p-1 rounded-sm text-white"
-            >
-              Resume
+  const closeNav = () => {
+    if (document.getElementById("myNav")) {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  };
+
+  return (
+    <>
+      <Fragment>
+        <div className="flex flex-row justify-between items-center w-11/12 xl:w-8/12 mx-auto p-6">
+          <h1 className="bold-font text-2xl text-gray-500">
+            <Link to={"/"}>
+              Kolade <b className="text-indigo-600">Joseph</b>
+            </Link>
+          </h1>
+
+          <div className="md:hidden" onClick={() => openNav()}>
+            <BsTextRight size={23} color="#4b5563" />
+          </div>
+
+          <div id="myNav" className="overlay">
+            <a href="#!" className="closebtn" onClick={() => closeNav()}>
+              &times;
             </a>
-          </li>
-          {!active ? (
-            <li>
-              <button
-                className="bg-gray-200 p-1 rounded-sm"
-                onClick={() => toggleDark()}
+            <div className="overlay-content regular-font text-lg">
+              <Link to={"/"} onClick={() => closeNav()}>
+                Home
+              </Link>
+              <Link to={"/skills"} onClick={() => closeNav()}>
+                Skills
+              </Link>
+              <Link to={"/Projects"} onClick={() => closeNav()}>
+                Projects
+              </Link>
+              <a
+                href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="w-40 mx-auto bg-indigo-600 p-1 rounded-sm text-white"
+                onClick={() => closeNav()}
               >
-                <BsMoonFill
-                  className="border border-gray-200 p-1 rounded-full"
-                  size={25}
-                />
-              </button>
-            </li>
-          ) : (
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <ul className="hidden md:flex flex-row sm:w-5/12 xl:w-4/12 justify-between regular-font text-gray-500 items-center">
             <li>
-              <button
-                className="bg-gray-800 p-1 rounded-sm"
-                onClick={() => toggleDark()}
-              >
-                <BsBrightnessHighFill
-                  className="border border-gray-800 p-1 rounded-full"
-                  size={25}
-                />
-              </button>
+              <Link to={"/"}>Home</Link>
             </li>
-          )}
-        </ul>
-      </div>
-    </Fragment>
+            <li>
+              <Link to={"/skills"}>Skills</Link>
+            </li>
+            <li>
+              <Link to={"/projects"}>Projects</Link>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer"
+                className="bg-indigo-600 p-1 rounded-sm text-white"
+              >
+                Resume
+              </a>
+            </li>
+            {!active ? (
+              <li>
+                <button
+                  className="bg-gray-200 p-1 rounded-sm"
+                  onClick={() => toggleDark()}
+                >
+                  <BsMoonFill
+                    className="border border-gray-200 p-1 rounded-full"
+                    size={25}
+                  />
+                </button>
+              </li>
+            ) : (
+              <li>
+                <button
+                  className="bg-gray-800 p-1 rounded-sm"
+                  onClick={() => toggleDark()}
+                >
+                  <BsBrightnessHighFill
+                    className="border border-gray-800 p-1 rounded-full"
+                    size={25}
+                  />
+                </button>
+              </li>
+            )}
+          </ul>
+        </div>
+      </Fragment>
+    </>
   );
 };
 
