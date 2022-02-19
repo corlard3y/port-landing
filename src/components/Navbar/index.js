@@ -52,6 +52,31 @@ const Navbar = ({ toggleDark, active }) => {
               >
                 Resume
               </a>
+              {!active ? (
+                <li className="mt-4 mx-auto">
+                  <button
+                    className="bg-gray-200 p-1 rounded-sm"
+                    onClick={() => toggleDark()}
+                  >
+                    <BsMoonFill
+                      className="border border-gray-200 p-1 rounded-full"
+                      size={25}
+                    />
+                  </button>
+                </li>
+              ) : (
+                <li className="mt-4 mx-auto">
+                  <button
+                    className="bg-gray-800 p-1 rounded-sm"
+                    onClick={() => toggleDark()}
+                  >
+                    <BsBrightnessHighFill
+                      className="border border-gray-800 p-1 rounded-full"
+                      size={25}
+                    />
+                  </button>
+                </li>
+              )}
             </div>
           </div>
 

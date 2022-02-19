@@ -50,9 +50,9 @@ const Projects = () => {
             <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">
               {x?.body}
             </p>
-            <div className="mt-4 mb-8">
+            <div className="mt-4">
               {x?.stack?.map((item, i) => (
-                <span className="cards" key={i}>
+                <span className="cards inline-block" key={i}>
                   {item}
                 </span>
               ))}
