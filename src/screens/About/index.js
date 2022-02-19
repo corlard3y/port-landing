@@ -27,7 +27,7 @@ const About = () => {
           Here are a few technologies I've been working with recently:
         </p>
 
-        <div className="flex flex-row justify-between w-1/3 mx-auto">
+        <div className="flex flex-col md:flex-row justify-between w-1/3 mx-auto">
           <ul className="actual-font text-sm text-gray-500 list-disc listings">
             <li>HTML & CSS</li>
             <li>JavaScript/Typescript</li>

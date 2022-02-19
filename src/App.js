@@ -25,7 +25,6 @@ function App() {
       localStorage.theme = "dark";
       setActive(false);
     }
-    console.log(localStorage.theme);
   };
   return (
     <BrowserRouter>

@@ -1,16 +1,11 @@
 import React, { Fragment } from "react";
-import {
-  BsEnvelopeFill,
-  BsGithub,
-  BsLinkedin,
-  BsTwitter,
-} from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <Fragment>
-      <div className="xl:w-8/12 mx-auto py-6">
-        <ul className="list-none flex flex-row justify-between items-center xl:w-1/3 mx-auto text-gray-700 dark:text-gray-900">
+      <div className="xl:w-8/12 mx-auto py-6 flex flex-row items-center">
+        <ul className="list-none flex flex-row justify-between items-center xl:w-1/3 mx-auto text-gray-700">
           <li>
             <a
               href="https://github.com/corlard3y"
@@ -38,18 +33,18 @@ const Footer = () => {
               <BsTwitter size={25} />
             </a>
           </li>
-          <li className="">
-            <a
-              href="mailto:oyewumi.koladej@gmail.com"
-              className="flex flex-row items-center"
-            >
-              <BsEnvelopeFill size={25} />
-              {/* <p className="text-xs actual-font ml-2">
-                oyewumi.koladej@gmail.com
-              </p> */}
-            </a>
-          </li>
         </ul>
+
+        <div>
+          <a
+            href="mailto:oyewumi.koladej@gmail.com"
+            className="flex flex-row items-center hover:underline text-gray-700"
+          >
+            <p className="text-xs actual-font ml-2">
+              oyewumi.koladej@gmail.com
+            </p>
+          </a>
+        </div>
       </div>
     </Fragment>
   );

@@ -37,10 +37,7 @@ const Projects = () => {
   ];
   return (
     <Fragment>
-      {/* <h1 className="dark:text-white bold-font text-center mt-12">
-        Coming Soon
-      </h1> */}
-      <div className="xl:w-8/12 mx-auto py-12">
+      <div className="w-11/12 xl:w-8/12 mx-auto py-12">
         {/* <h1 className="bold-font text-center">Company Projects</h1> */}
         {Projects?.map((x, i) => (
           <div
@@ -50,7 +47,7 @@ const Projects = () => {
             <h1 className="bold-font text-lg text-gray-500 dark:text-gray-500">
               {x?.title}
             </h1>
-            <p className="actual-font text-sm mt-4 leading-loose text-gray-500">
+            <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">
               {x?.body}
             </p>
             <div className="mt-4 mb-8">
