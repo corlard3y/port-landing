@@ -12,7 +12,7 @@ const Navbar = ({ toggleDark, active }) => {
           </Link>
         </h1>
 
-        <ul className="flex flex-row xl:w-5/12 justify-between regular-font text-gray-500 items-center">
+        <ul className="flex flex-row xl:w-3/12 justify-between regular-font text-gray-500 items-center">
           <li>
             <Link to={"/"}>Home</Link>
           </li>
@@ -21,9 +21,6 @@ const Navbar = ({ toggleDark, active }) => {
           </li>
           <li>
             <Link to={"/projects"}>Projects</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>Contact</Link>
           </li>
           {!active ? (
             <li>

@@ -4,6 +4,18 @@ const About = () => {
   return (
     <Fragment>
       <div className="xl:w-8/12 mx-auto h-auto my-auto">
+        <h1 className="text-center bold-font text-2xl text-gray-500">
+          My Skills & More about me
+        </h1>
+
+        <p className="actual-font text-center mt-12 text-sm w-2/3 leading-loose mx-auto text-gray-500">
+          Innovative Software Developer with 3+ years of solid experience
+          building and maintaining responsive websites and apps in collaborative
+          environments. I find creative ways to solve problems for users while
+          delivering the best experiences. I am always striving for mastery in
+          my craft and offer full commitment to teamwork.
+        </p>
+
         <p className="actual-font text-center mt-12 text-sm w-2/3 leading-loose mx-auto text-gray-500">
           I'm a self taught developer, passionate in building responsive,
           beautiful and accessible apps using clean and elegant code. When I’m

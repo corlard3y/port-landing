@@ -4,8 +4,8 @@ import About from "./screens/About";
 import Home from "./screens/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Projects from "./screens/Projects";
-import Contact from "./screens/Contact";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -32,16 +32,15 @@ function App() {
       <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
         <Navbar toggleDark={toggleDark} active={active} />
 
-        <section className="flex-1 my-auto">
+        <section className="my-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/skills" element={<About />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* <Home /> */}
-            {/* <About /> */}
           </Routes>
         </section>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );

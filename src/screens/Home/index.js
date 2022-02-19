@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <Fragment>
       <div className="xl:w-8/12 mx-auto">
-        <div className="w-36 border border-gray-200 mx-auto mt-40 rounded-lg p-2 bg-gray-300 dark:bg-black dark:border-none">
+        <div className="w-36 border border-gray-200 mx-auto rounded-lg p-2 bg-gray-300 dark:bg-black dark:border-none">
           <img src={avatar} alt="" className="my-auto mx-auto" />
         </div>
 
