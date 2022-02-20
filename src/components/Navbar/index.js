@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { BsBrightnessHighFill, BsMoonFill, BsTextRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 const Navbar = ({ toggleDark, active }) => {
   const openNav = () => {
@@ -82,13 +82,34 @@ const Navbar = ({ toggleDark, active }) => {
 
           <ul className="hidden md:flex flex-row sm:w-5/12 xl:w-4/12 justify-between regular-font text-gray-500 items-center">
             <li>
-              <Link to={"/"}>Home</Link>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  isActive ? `text-indigo-500 bold-font cat` : ""
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <Link to={"/skills"}>Skills</Link>
+              <NavLink
+                to={"/skills"}
+                className={({ isActive }) =>
+                  isActive ? `text-indigo-500 bold-font cat` : ""
+                }
+              >
+                Skills
+              </NavLink>
             </li>
             <li>
-              <Link to={"/projects"}>Projects</Link>
+              <NavLink
+                to={"/projects"}
+                className={({ isActive }) =>
+                  isActive ? `text-indigo-500 bold-font cat` : ""
+                }
+              >
+                Projects
+              </NavLink>
             </li>
             <li>
               <a
@@ -127,6 +148,7 @@ const Navbar = ({ toggleDark, active }) => {
             )}
           </ul>
         </div>
+        <Outlet />
       </Fragment>
     </>
   );

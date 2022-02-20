@@ -41,6 +41,19 @@
   font-family: "DM Sans", sans-serif;
 }
 
+/* .cat::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #4f46e5;
+  text-align: center;
+  position: relative;
+  top: 0px;
+  left: 0;
+  border-radius: 50%;
+} */
+
 /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
