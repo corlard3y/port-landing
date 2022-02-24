@@ -1,8 +1,12 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { BsBrightnessHighFill, BsMoonFill, BsTextRight } from "react-icons/bs";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = ({ toggleDark, active }) => {
+  const router = useRouter();
+  const currentRoute = router.pathname;
+  console.log(currentRoute);
   const openNav = () => {
     if (document.getElementById("myNav")) {
       document.getElementById("myNav").style.width = "100%";
@@ -20,8 +24,10 @@ const Navbar = ({ toggleDark, active }) => {
       <Fragment>
         <div className="flex flex-row justify-between items-center w-11/12 xl:w-8/12 mx-auto p-6">
           <h1 className="bold-font text-2xl text-gray-500">
-            <Link to={"/"}>
-              Kolade <b className="text-indigo-600">Joseph</b>
+            <Link href={"/"}>
+              <b className="text-indigo-600">
+                <b className="text-gray-500 mr-2">Kolade</b>Joseph
+              </b>
             </Link>
           </h1>
 
@@ -34,13 +40,13 @@ const Navbar = ({ toggleDark, active }) => {
               &times;
             </a>
             <div className="overlay-content regular-font text-lg">
-              <Link to={"/"} onClick={() => closeNav()}>
+              <Link href={"/"} onClick={() => closeNav()}>
                 Home
               </Link>
-              <Link to={"/skills"} onClick={() => closeNav()}>
+              <Link href={"/skills"} onClick={() => closeNav()}>
                 Skills
               </Link>
-              <Link to={"/Projects"} onClick={() => closeNav()}>
+              <Link href={"/Projects"} onClick={() => closeNav()}>
                 Projects
               </Link>
               <a
@@ -82,41 +88,48 @@ const Navbar = ({ toggleDark, active }) => {
 
           <ul className="hidden md:flex flex-row sm:w-5/12 xl:w-4/12 justify-between regular-font text-gray-500 items-center">
             <li>
-              <NavLink
-                to={"/"}
-                className={({ isActive }) =>
-                  isActive ? `text-indigo-500 bold-font cat` : ""
-                }
-              >
-                Home
-              </NavLink>
+              <Link href={"/"}>
+                <a
+                  className={
+                    currentRoute === "/" ? `text-indigo-500 bold-font cat` : ""
+                  }
+                >
+                  Home
+                </a>
+              </Link>
             </li>
             <li>
-              <NavLink
-                to={"/skills"}
-                className={({ isActive }) =>
-                  isActive ? `text-indigo-500 bold-font cat` : ""
-                }
-              >
-                Skills
-              </NavLink>
+              <Link href={"/about"}>
+                <a
+                  className={
+                    currentRoute === "/about"
+                      ? `text-indigo-500 bold-font cat`
+                      : ""
+                  }
+                >
+                  Skills
+                </a>
+              </Link>
             </li>
             <li>
-              <NavLink
-                to={"/projects"}
-                className={({ isActive }) =>
-                  isActive ? `text-indigo-500 bold-font cat` : ""
-                }
-              >
-                Projects
-              </NavLink>
+              <Link href={"/projects"}>
+                <a
+                  className={
+                    currentRoute === "/projects"
+                      ? `text-indigo-500 bold-font cat`
+                      : ""
+                  }
+                >
+                  Projects
+                </a>
+              </Link>
             </li>
             <li>
               <a
                 href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
-                className="bg-indigo-600 p-1 rounded-sm text-white"
+                className="bg-indigo-600 p-1 rounded-sm actual-font text-sm text-white"
               >
                 Resume
               </a>
@@ -148,7 +161,6 @@ const Navbar = ({ toggleDark, active }) => {
             )}
           </ul>
         </div>
-        <Outlet />
       </Fragment>
     </>
   );

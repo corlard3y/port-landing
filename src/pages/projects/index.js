@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import { MdOutlineVideoSettings } from "react-icons/md";
 
 const Projects = () => {

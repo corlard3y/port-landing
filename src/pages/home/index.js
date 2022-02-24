@@ -1,12 +1,15 @@
-import React, { Fragment } from "react";
-import avatar from "../../assets/imgs/image.png";
+import { Fragment } from "react";
 
 const Home = () => {
   return (
     <Fragment>
       <div className="xl:w-8/12 mx-auto">
         <div className="w-36 border border-gray-200 mx-auto rounded-lg p-2 bg-gray-300 dark:bg-black dark:border-none">
-          <img src={avatar} alt="" className="my-auto mx-auto" />
+          <img
+            src={"/assets/imgs/image.png"}
+            alt=""
+            className="my-auto mx-auto"
+          />
         </div>
 
         <h1 className="text-center mt-8 bold-font text-2xl text-gray-500">
