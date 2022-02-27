@@ -25,7 +25,7 @@ const Navbar = ({ toggleDark, active }) => {
         <div className="flex flex-row justify-between items-center w-11/12 xl:w-8/12 mx-auto p-6">
           <h1 className="bold-font text-2xl text-gray-500">
             <Link href={"/"}>
-              <b className="text-indigo-600">
+              <b className="text-indigo-600 cursor-pointer">
                 <b className="text-gray-500 mr-2">Kolade</b>Joseph
               </b>
             </Link>

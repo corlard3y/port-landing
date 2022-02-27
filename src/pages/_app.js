@@ -1,11 +1,18 @@
 import "../../styles/globals.css";
 import Head from "next/head";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const [active, setActive] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 2000);
+  }, []);
 
   const toggleDark = (e) => {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -40,13 +47,24 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
-        <Navbar toggleDark={toggleDark} active={active} />
-        <section className="my-auto">
-          <Component {...pageProps} />
-        </section>
-        <Footer />
-      </div>
+      {loading ? (
+        <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
+          <Navbar toggleDark={toggleDark} active={active} />
+          <section className="my-auto">
+            <Component {...pageProps} />
+          </section>
+          <Footer />
+        </div>
+      ) : (
+        <div className="bg-white min-h-screen dark:bg-black flex flex-col justify-between items-center">
+          <img
+            src={"/assets/imgs/Ellipsis.svg"}
+            alt=""
+            className="my-auto mx-auto w-40"
+          />
+        </div>
+      )}
+
       {/* <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
         <Navbar />
         <section className="my-auto">

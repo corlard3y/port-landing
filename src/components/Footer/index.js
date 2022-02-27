@@ -11,6 +11,7 @@ const Footer = () => {
               href="https://github.com/corlard3y"
               target="_blank"
               rel="noreferrer"
+              className=" hover:text-indigo-600"
             >
               <BsGithub size={25} />
             </a>
@@ -20,6 +21,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/kolade-oyewumi-644492195/"
               target="_blank"
               rel="noreferrer"
+              className=" hover:text-indigo-600"
             >
               <BsLinkedin size={25} />
             </a>
@@ -28,6 +30,7 @@ const Footer = () => {
             <a
               href="https://www.twitter.com/corlard3y"
               target="_blank"
+              className=" hover:text-indigo-600"
               rel="noreferrer"
             >
               <BsTwitter size={25} />
