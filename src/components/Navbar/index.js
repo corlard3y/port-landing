@@ -2,11 +2,11 @@ import { Fragment } from "react";
 import { BsBrightnessHighFill, BsMoonFill, BsTextRight } from "react-icons/bs";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Fade from "react-reveal/Reveal";
 
 const Navbar = ({ toggleDark, active }) => {
   const router = useRouter();
   const currentRoute = router.pathname;
-  console.log(currentRoute);
   const openNav = () => {
     if (document.getElementById("myNav")) {
       document.getElementById("myNav").style.width = "100%";
@@ -14,15 +14,18 @@ const Navbar = ({ toggleDark, active }) => {
   };
 
   const closeNav = () => {
+    console.log("seen");
     if (document.getElementById("myNav")) {
       document.getElementById("myNav").style.width = "0%";
+      console.log("seenn");
     }
   };
 
   return (
     <>
       <Fragment>
-        <div className="flex flex-row justify-between items-center w-11/12 xl:w-8/12 mx-auto p-6">
+        {/* <Fade top> */}
+        <div className="flex flex-row justify-between items-center w-full xl:w-8/12 mx-auto p-4 xl:p-6">
           <h1 className="bold-font text-2xl text-gray-500">
             <Link href={"/"}>
               <b className="text-indigo-600 cursor-pointer">
@@ -40,14 +43,14 @@ const Navbar = ({ toggleDark, active }) => {
               &times;
             </a>
             <div className="overlay-content regular-font text-lg">
-              <Link href={"/"} onClick={() => closeNav()}>
-                Home
+              <Link href={"/"}>
+                <a onClick={() => closeNav()}>Home</a>
               </Link>
-              <Link href={"/skills"} onClick={() => closeNav()}>
-                Skills
+              <Link href={"/about"}>
+                <a onClick={() => closeNav()}>Skills</a>
               </Link>
-              <Link href={"/Projects"} onClick={() => closeNav()}>
-                Projects
+              <Link href={"/projects"}>
+                <a onClick={() => closeNav()}>Projects</a>
               </Link>
               <a
                 href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
@@ -161,6 +164,7 @@ const Navbar = ({ toggleDark, active }) => {
             )}
           </ul>
         </div>
+        {/* </Fade> */}
       </Fragment>
     </>
   );

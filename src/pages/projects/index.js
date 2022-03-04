@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { MdOutlineVideoSettings } from "react-icons/md";
+import Bounce from "react-reveal/Bounce";
 
 const Projects = () => {
   const Projects = [
@@ -37,38 +38,40 @@ const Projects = () => {
   ];
   return (
     <Fragment>
-      <div className="w-11/12 xl:w-8/12 mx-auto py-12">
-        {/* <h1 className="bold-font text-center">Company Projects</h1> */}
-        {Projects?.map((x, i) => (
-          <div
-            key={i}
-            className="w-full bg-gray-200 dark:bg-gray-900 p-8 mt-12 rounded-md shadow-sm"
-          >
-            <h1 className="bold-font text-lg text-gray-500 dark:text-gray-500">
-              {x?.title}
-            </h1>
-            <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">
-              {x?.body}
-            </p>
-            <div className="mt-4">
-              {x?.stack?.map((item, i) => (
-                <span className="cards inline-block" key={i}>
-                  {item}
-                </span>
-              ))}
-            </div>
-            <a
-              target="_blank"
-              className="blanks"
-              href={x?.live}
-              rel="noreferrer"
+      <Bounce right>
+        <div className="w-11/12 xl:w-8/12 mx-auto py-12">
+          {/* <h1 className="bold-font text-center">Company Projects</h1> */}
+          {Projects?.map((x, i) => (
+            <div
+              key={i}
+              className="w-full bg-gray-200 dark:bg-gray-900 p-8 mt-12 rounded-md shadow-sm"
             >
-              <MdOutlineVideoSettings size={20} />
-              <p className="ml-2">View Live</p>
-            </a>
-          </div>
-        ))}
-      </div>
+              <h1 className="bold-font text-lg text-gray-500 dark:text-gray-500">
+                {x?.title}
+              </h1>
+              <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">
+                {x?.body}
+              </p>
+              <div className="mt-4">
+                {x?.stack?.map((item, i) => (
+                  <span className="cards inline-block" key={i}>
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <a
+                target="_blank"
+                className="blanks"
+                href={x?.live}
+                rel="noreferrer"
+              >
+                <MdOutlineVideoSettings size={20} />
+                <p className="ml-2">View Live</p>
+              </a>
+            </div>
+          ))}
+        </div>
+      </Bounce>
     </Fragment>
   );
 };

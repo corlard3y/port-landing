@@ -4,8 +4,8 @@ import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 const Footer = () => {
   return (
     <Fragment>
-      <div className="w-11/12 xl:w-8/12 mx-auto p-6 flex md:flex-row flex-col-reverse items-center">
-        <ul className="list-none flex flex-row justify-between items-center w-11/12 md:w-2/6 xl:w-1/3 mx-auto text-gray-700">
+      <div className="w-full xl:w-8/12 mx-auto p-4 xl:p-6 flex md:flex-row flex-col-reverse items-center">
+        <ul className="list-none flex flex-row justify-between items-center w-11/12 md:w-2/6 xl:w-1/3 mx-auto text-gray-500">
           <li>
             <a
               href="https://github.com/corlard3y"
@@ -41,7 +41,7 @@ const Footer = () => {
         <div className="mb-8 lg:mb-0 md:my-auto">
           <a
             href="mailto:oyewumi.koladej@gmail.com"
-            className="flex flex-row items-center hover:underline text-gray-700"
+            className="flex flex-row items-center hover:underline text-gray-500"
           >
             <p className="text-xs actual-font ml-2">
               oyewumi.koladej@gmail.com

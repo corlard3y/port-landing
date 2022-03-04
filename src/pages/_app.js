@@ -64,14 +64,6 @@ function MyApp({ Component, pageProps }) {
           />
         </div>
       )}
-
-      {/* <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
-        <Navbar />
-        <section className="my-auto">
-          <Home />
-        </section>
-        <Footer />
-      </div> */}
     </>
   );
 }
