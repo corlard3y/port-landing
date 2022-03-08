@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       {loading ? (
-        <div className="bg-white dark:bg-black flex flex-col min-h-screen justify-between">
+        <div className="bg-black flex flex-col min-h-screen justify-between">
           <Navbar toggleDark={toggleDark} active={active} />
           <section className="my-auto">
             <Component {...pageProps} />
@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
           <Footer />
         </div>
       ) : (
-        <div className="bg-white min-h-screen dark:bg-black flex flex-col justify-between items-center">
+        <div className="bg-black min-h-screen flex flex-col justify-between items-center">
           <img
             src={"/assets/imgs/Ellipsis.svg"}
             alt=""

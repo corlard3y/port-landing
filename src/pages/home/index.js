@@ -6,7 +6,7 @@ const Home = () => {
     <Fragment>
       <div className="xl:w-8/12 mx-auto">
         <Fade right>
-          <div className="w-36 border border-gray-200 mx-auto rounded-lg p-2 bg-gray-300 dark:bg-black dark:border-none">
+          <div className="w-36 mx-auto rounded-lg p-2 bg-black border-none">
             <img
               src={"/assets/imgs/image.png"}
               alt=""

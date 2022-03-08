@@ -61,7 +61,7 @@ const Navbar = ({ toggleDark, active }) => {
               >
                 Resume
               </a>
-              {!active ? (
+              {/* {!active ? (
                 <li className="mt-4 mx-auto">
                   <button
                     className="bg-gray-200 p-1 rounded-sm"
@@ -85,7 +85,7 @@ const Navbar = ({ toggleDark, active }) => {
                     />
                   </button>
                 </li>
-              )}
+              )} */}
             </div>
           </div>
 
@@ -137,7 +137,7 @@ const Navbar = ({ toggleDark, active }) => {
                 Resume
               </a>
             </li>
-            {!active ? (
+            {/* {!active ? (
               <li>
                 <button
                   className="bg-gray-200 p-1 rounded-sm"
@@ -161,7 +161,7 @@ const Navbar = ({ toggleDark, active }) => {
                   />
                 </button>
               </li>
-            )}
+            )} */}
           </ul>
         </div>
         {/* </Fade> */}
