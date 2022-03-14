@@ -44,7 +44,13 @@ const Projects = () => {
           {Projects?.map((x, i) => (
             <div
               key={i}
-              className="w-full bg-gray-900 p-8 mt-12 rounded-md shadow-sm"
+              className="w-full bg-slate-900 p-8 mt-12 rounded-md shadow-sm"
+              style={
+                {
+                  // background: "rgba(0,0,0,0.8)",
+                  // backdropFilter: "blur(10px)",
+                }
+              }
             >
               <h1 className="bold-font text-lg text-gray-500">{x?.title}</h1>
               <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">

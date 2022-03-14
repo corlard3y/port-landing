@@ -20,7 +20,8 @@ const Home = () => {
         </h1>
 
         <Fade bottom>
-          <h2 className="animate-bounce w-48 p-1 bold-font text-white rounded-md shadow-md mx-auto mt-8 bg-indigo-600 text-center">
+          <h2 clasame="animate-bounce w-48 p-1 bold-font text-white rounded-md shadow-md mx-auto mt-8 bg-indigo-600 text-center">
+            {/* <h2 className="animate-bounce w-48 p-1 bold-font text-white rounded-md shadow-md mx-auto mt-8 bg-indigo-600 text-center"> */}
             Software Developer
           </h2>
 
