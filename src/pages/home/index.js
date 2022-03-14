@@ -34,7 +34,7 @@ const Home = () => {
             teamwork.
           </p>
 
-          <p className="actual-font text-center mt-4 text-sm w-2/3 leading-loose mx-auto text-gray-500">
+          {/* <p className="actual-font text-center mt-4 text-sm w-2/3 leading-loose mx-auto text-gray-500">
             I currently work as a Front-end Developer at{" "}
             <a
               href="https://datazen.online"
@@ -44,7 +44,7 @@ const Home = () => {
             >
               Datazen
             </a>
-          </p>
+          </p> */}
         </Fade>
       </div>
     </Fragment>
