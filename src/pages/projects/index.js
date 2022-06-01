@@ -52,11 +52,13 @@ const Projects = () => {
                 }
               }
             >
-              <h1 className="bold-font text-lg text-gray-500">{x?.title}</h1>
-              <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500">
+              <h1 className="bold-font text-lg text-gray-500 bg-slate-900">
+                {x?.title}
+              </h1>
+              <p className="actual-font text-xs lg:text-sm mt-4 leading-6 xl:leading-6 text-gray-500 bg-slate-900">
                 {x?.body}
               </p>
-              <div className="mt-4">
+              <div className="mt-4 bg-slate-900">
                 {x?.stack?.map((item, i) => (
                   <span className="cards inline-block" key={i}>
                     {item}
@@ -69,8 +71,8 @@ const Projects = () => {
                 href={x?.live}
                 rel="noreferrer"
               >
-                <MdOutlineVideoSettings size={20} />
-                <p className="ml-2">View Live</p>
+                <MdOutlineVideoSettings size={20} className="bg-indigo-600" />
+                <p className="ml-2 bg-indigo-600">View Live</p>
               </a>
             </div>
           ))}
