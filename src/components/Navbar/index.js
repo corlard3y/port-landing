@@ -129,7 +129,7 @@ const Navbar = ({ toggleDark, active }) => {
             </li>
             <li>
               <a
-                href="https://drive.google.com/file/d/1yCSl4xj4zgFPWKF2zBhUNEBXHqRJbfnh/view?usp=sharing"
+                href="https://drive.google.com/file/d/18ha80LXA0ooTUr1IjMkhQZhz8lkUhz8v/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
                 className="bg-indigo-600 p-1 rounded-sm actual-font text-sm text-white"
